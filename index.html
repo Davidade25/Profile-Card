@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Crown Profile Card</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
+      }
+      .card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 300px;
+        width: 100%;
+      }
+      .card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .card h2,
+      .card p {
+        margin: 10px 0;
+      }
+      .social-links a {
+        margin: 0 5px;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img
+        src="David Ade.jpg"
+        alt="David Adelesi"
+        data-testid="profilePicture"
+      />
+      <h2 data-testid="fullName">David Adelesi</h2>
+      <p data-testid="jobTitle">Web Development Instructor</p>
+      <p data-testid="shortBio">
+        I'm currently a student at NOUN, studying Computer Science Bs.c. I love
+        tech and I'm also a Christian (A king and a god). I'm also working at a
+        coding hub as a web instructor and do freelance jobs.
+      </p>
+      <p data-testid="currentLocation">Lagos, Nigeria</p>
+      <p data-testid="emailAddress">adelesidavid@gmail.com</p>
+      <div class="social-links" data-testid="socialLinks">
+        <a
+          href="https://www.linkedin.com/in/david-taiwo-adelesi"
+          target="_blank"
+          >LinkedIn</a
+        >
+        <a href="https://github.com/Davidade25" target="_blank">GitHub</a>
+        <a href="https://twitter.com/david_adelesi" target="_blank">Twitter</a>
+      </div>
+      <p data-testid="currentTimeUTC" id="utc-time"></p>
+    </div>
+
+    <script>
+      function updateTime() {
+        document.getElementById("utc-time").innerText =
+          "Current UTC Time: " + new Date().toUTCString();
+      }
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
+  </body>
+</html>
